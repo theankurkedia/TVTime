@@ -1,7 +1,14 @@
 import { createMaterialTopTabNavigator } from "react-navigation";
-import ListScreen from "./src/ListScreen.js";
+import HomeScreen from "./src/homeScreen";
+import React from "react";
+import { Root } from "native-base";
 
-export default createMaterialTopTabNavigator({
-  Screen1: ListScreen,
-  Screen2: ListScreen
-});
+export default class App extends React.Component {
+  render() {
+    return (
+      <Root>
+        <HomeScreen />
+      </Root>
+    );
+  }
+}
